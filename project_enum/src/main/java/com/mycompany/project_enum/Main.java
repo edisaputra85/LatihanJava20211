@@ -33,7 +33,6 @@ enum JenisAgama{
     KONGHUCU,
 }
     
-
 class Biodata{
     String nama;
     int umur;
@@ -53,6 +52,10 @@ public class Main {
         
         if (fulan.agama == JenisAgama.ISLAM) System.out.println("agama Islam");
         else if (fulan.agama == JenisAgama.KATOLIK) System.out.println("agama Katolik");
+        //membaca semua nilai enum yang ada pada JenisAgama
+        for (JenisAgama namaAgama: JenisAgama.values()){
+            System.out.println(namaAgama.name());   
+        }
         
         //ketika objek dibuat menggunakan instance yg sudah ada
         AccountType account = AccountType.DEPOSIT;
