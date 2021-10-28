@@ -19,12 +19,47 @@ enum AccountType {
     }//end 
 }
 
+enum Gender{
+        PRIA,
+        WANITA
+}
+
+enum JenisAgama{
+    ISLAM,
+    KRISTEN,
+    KATOLIK,
+    HINDU,
+    BUDHA,
+    KONGHUCU,
+}
+    
+
+class Biodata{
+    String nama;
+    int umur;
+    Gender jenisKelamin;
+    JenisAgama agama;
+    Biodata(String nama, int umur, Gender jenisKelamin, JenisAgama agama){
+        this.nama = nama;
+        this.umur = umur;
+        this.jenisKelamin = jenisKelamin;
+        this.agama = agama;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
+        Biodata fulan = new Biodata("Ronaldo",34,Gender.PRIA,JenisAgama.KATOLIK);
+        
+        if (fulan.agama == JenisAgama.ISLAM) System.out.println("agama Islam");
+        else if (fulan.agama == JenisAgama.KATOLIK) System.out.println("agama Katolik");
+        
         //ketika objek dibuat menggunakan instance yg sudah ada
         AccountType account = AccountType.DEPOSIT;
         System.out.println("Type: " + account.name()
         +"\nCode: " + account.getCode()
-        +"\nRate: " + account.getRate());        
+        +"\nRate: " + account.getRate());    
+        
     }   
 }
+
