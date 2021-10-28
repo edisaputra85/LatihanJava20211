@@ -32,23 +32,32 @@ enum JenisAgama{
     BUDHA,
     KONGHUCU,
 }
+
+enum GolonganDarah{
+    A,
+    B,
+    AB,
+    O
+}
     
 class Biodata{
     String nama;
     int umur;
     Gender jenisKelamin;
     JenisAgama agama;
-    Biodata(String nama, int umur, Gender jenisKelamin, JenisAgama agama){
+    GolonganDarah gol;
+    Biodata(String nama, int umur, Gender jenisKelamin, JenisAgama agama, GolonganDarah gol){
         this.nama = nama;
         this.umur = umur;
         this.jenisKelamin = jenisKelamin;
         this.agama = agama;
+        this.gol = gol;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Biodata fulan = new Biodata("Ronaldo",34,Gender.PRIA,JenisAgama.KATOLIK);
+        Biodata fulan = new Biodata("Ronaldo",34,Gender.PRIA,JenisAgama.KATOLIK,GolonganDarah.O);
         
         if (fulan.agama == JenisAgama.ISLAM) System.out.println("agama Islam");
         else if (fulan.agama == JenisAgama.KATOLIK) System.out.println("agama Katolik");
