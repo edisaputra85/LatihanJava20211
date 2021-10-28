@@ -9,17 +9,16 @@ package com.mycompany.project_generic_class;
  *
  * @author LENOVO
  */
-public class GenericData <T>{
-T data1  ;     
-
-GenericData(T data){
-    data1 = data;
+public class GenericData <T1,T2>{
+T1 data1  ; 
+T2 data2;
+T2 data3;
+void setData(T1 data1, T2 data2){
+    this.data1 = data1;
+    this.data2 = data2;
 }
 
-void CetakData(){
-    int num;
-    num = (int)data1;
-    System.out.println(num);   
-}
-    
+<E> void CetakData(E inputData){
+    System.out.println(inputData); 
+}    
 }
