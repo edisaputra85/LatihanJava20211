@@ -14,7 +14,7 @@ public class Main {
         //sintaks membuat objek dari class generic
         GenericData<String,Boolean> myData = new GenericData<>();
         myData.setData("Ini String",true);
-        
+        myData.CetakData(true);
         //sintaks membuat objek dari class generic
         GenericData<Integer,Boolean> yourData = new GenericData<>();
         yourData.setData(5,false);    
